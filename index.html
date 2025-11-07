@@ -1,0 +1,330 @@
+ BENBADA ABD AZIZ N BELANIGUE DHIAA EDDINE ISLAM
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENSTA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0b0b0b;
+            color: #e8e8e8;
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            position: relative;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(10,10,10,0.6), rgba(10,10,10,0.4)),
+                        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvyq-HKLRL1jQJnsj7f9BUmCeSLCHMcXOU1MwxIeUyYYzT7OIfAomqEQ4DMj4N4jYzXdc&usqp=CAU') center/cover no-repeat;
+            padding: 100px 20px;
+            border-bottom: 2px solid #00c6ff;
+        }
+
+        header img {
+            width: 120px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #00c6ff;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #b5b5b5;
+        }
+
+        /* ===== NAV ===== */
+        nav {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #333;
+        }
+
+        nav a {
+            color: #00c6ff;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #00c6ff;
+            color: #111;
+            border-radius: 30px;
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: #1b1b1b;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        section h2 {
+            color: #00c6ff;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-left: 4px solid #0072ff;
+            padding-left: 10px;
+        }
+
+        section p {
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        /* ===== MAJORS ===== */
+        ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* ===== CLUBS ===== */
+        .club {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: #222;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .club:hover {
+            background-color: #2b2b2b;
+        }
+
+        .club img {
+            width: 200px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .club-info h3 {
+            color: #00c6ff;
+            margin-bottom: 5px;
+        }
+
+        .club-info p {
+            color: #bfbfbf;
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+> . U7G:
+/* ===== FOOTER ===== */
+        footer {
+            background-color: #0d0d0d;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #333;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        ol {
+            margin-left: 20px;
+        }
+
+        @media (max-width: 700px) {
+            .club {
+                flex-direction: column;
+                text-align: center;
+            }
+            header img {
+                width: 80px;
+                position: static;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://elearning.ensta.edu.dz/pluginfile.php/1/theme_academi/footerlogo/1715699273/ENSTA%20logo.png " alt="University Logo">
+        <h1>ENSTA
+المدرسة الوطنية العليا للتكنولوجيات المتقدمة
+National Higher School of Advanced Technologies</h1>
+        <p>A center of excellence in higher education, guaranteeing highly qualified training for the benefit of different sectors of economic and commercial activity in the country.</p>
+    </header>
+
+    <nav>
+        <a onclick="showSection('about')">About</a>
+        <a onclick="showSection('majors')">Majors</a>
+        <a onclick="showSection('activities')">Activities</a>
+        <a onclick="showSection('clubs')">Clubs</a>
+        <a onclick="showSection('contact')">Contact</a>
+        <a onclick="showSection('advice')">Advice</a>
+    </nav>
+
+    <section id="about" class="active">
+        <h2>About ENSTA</h2>
+        <p>The National Higher School of Advanced Technologies (ENSTA) is one of the premier institutions specialized in the fields of science, technology, mathematics, and computer science.
+
+Born from the merger of the National Higher School of Technology and the Higher School of Applied Sciences, ENSTA inherited their property, rights, obligations, personnel, and resources, establishing itself as a leading center for advanced technological education and research excellence.</p>
+    </section>
+
+    <section id="majors">
+    <h2>academic specializations</h2>
+    <p>ensta offers diverse and specialized programs divided into three main categories:</p>
+
+    <!-- تخصصات ST -->
+    <div style="margin-top:20px;">
+        <h3 style="color:#00c6ff;">🔬 ST Branch - Science & Technology</h3>
+        <ul>
+            <li>⚙️ Mechanical Engineering</li>
+            <li>💡 Electrical Engineering</li>
+            <li> Civil Engineering</li>
+            <li>Telecommunications</li>
+            <li>Industrial Engineering</li>
+            <li>Chemical Engineering</li>
+            <li> Materials Science</li>
+            <li>Energy Systems</li>
+        </ul>
+    </div>
+
+    <!-- تخصصات MI -->
+    <div style="margin-top:30px;">
+        <h3 style="color:#00c6ff;">💻 MI Branch - Mathematics & Computer Science</h3>
+        <ul>
+            <li>🧮 Cyber Security</li>
+            <li>🤖 Artificial Intelligence</li>
+           
+            
+        </ul>
+    </div>
+
+    
+</section>
+
+    <section id="activities">
+        <h2>Our Activities</h2>
+        <p>We organize regular events, workshops, and competitions to keep students engaged and motivated. These activities help members learn teamwork, leadership, and creativity.</p>
+        <p>💡 Add your own events here — such as charity work, student competitions, or cultural days.</p>
+    </section>
+
+    <section id="clubs">
+        <h2>Our Clubs</h2>
+
+        <div class="club">
+            <img src="https://ensta.edu.dz/wp-content/uploads/2025/11/codec-150x150.png" alt="CODEEC">
+            <div class="club-info">
+                <h3>Community of Developers and Engineers Club</h3>
+                <p>A specialized computer science club dedicated to fostering programming skills, software development, and technological innovation. Members engage in coding competitions, workshops, and collaborative projects that push the boundaries of digital creativity and technical excellence.</p>
+            </div>
+        </div>
+
+        <div class="club">
+            <img src="https://ensta.edu.dz/wp-content/uploads/2024/02/Algenius-150x150.jpg" alt="Algenius">
+            <div class="club-info">
+                <h3>Algenius</h3>
+                <p>Fondé en 2017, ALGENIUS est un club scientifique dynamique regroupant 100 membres passionnés par les sciences et les technologies. Implanté à l’Ecole Nationale Supérieure en Technologies Avancées (ENSTA) à Bab el Oued, il offre aux étudiants un espace de découverte, d’apprentissage et de partage autour de divers domaines scientifiques. Le club organise régulièrement des ateliers, des conférences, des sorties et des projets pour encourager l’apprentissage pratique et la collaboration entre les membres.</p>
+            </div>
+        </div>
+
+        <div class="club">
+            <img src="https://ensta.edu.dz/wp-content/uploads/2024/02/lightClub-150x150.jpg" alt="Leadership Club">
+            <div class="club-info">
+                <h3>LIGHT CLUB</h3>
+                <p>PlugIN is a dynamic and innovative scientific club affiliated with the GEII department of ENSTA School. Our club aims to promote students’ interest and engagement in the fields of electronics, industrial computing, and cutting-edge technologies. We offer a collaborative learning space and practical activities that allow members to develop their technical skills, participate in innovative projects, and prepare for their future careers in the industry.</p>
+            </div>
+        </div>
+    </section>
+
+   
+
+
+<section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="contact@enst.dz">contact@enst.dz</a></p>
+        <p>📍 Campus: Bab El Oued Campus
+
+Bab El Oued, Algiers
+
+Dergana Campus
+
+Dergana, Algiers</p>
+    </section>
+
+    <section id="advice">
+        <h2>Website Design Advice</h2>
+        <ol>
+            <li>Use a consistent color palette that’s easy on the eyes.</li>
+            <li>Keep sections organized and content short.</li>
+            <li>Use good-quality, lightweight images.</li>
+            <li>Make sure everything works on mobile and desktop.</li>
+            <li>Save your work frequently.</li>
+            <li>Test your links and fix errors early.</li>
+            <li>Ask for feedback before final submission.</li>
+        </ol>
+    </section>
+
+    <footer>
+        <p>ENSTA - Razika MAHDAOUI | Excellence in Advanced Technologies
+
+École Nationale Supérieure des Technologies Avancées — All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
